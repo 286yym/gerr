@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/gouwu.css"/>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/tools.js" ></script>
+	</head>
+	<body>
+		<div class="shou_div">
+			<div class="sz_div clear">
+				<ul class="sz_oneul">
+					<li>
+						<a>收藏我们<i></i></a>
+					</li>
+				</ul>
+				<ul class="sz_twoul clear">
+					<li>
+						<a>[登录]</a>
+						<a>[注册]</a>
+						<p class="clcg_p" style="display: none;"><span>注销</span></p>
+					</li>
+					<li>
+						<a>我的订单</a>
+					</li>
+					<li>
+						<a class="zy_a">格力官网</a>
+					</li>
+					<li>
+						<a>手机商城</a>
+						<p></p>
+						<ul class="sjew">
+							<li>扫描二维码下载客户端</li>
+							<li>
+								<div class="xz_div">
+									<a>Android</a>
+								</div>
+								<div class="erw_div"></div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a>帮助中心</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="er_div">
+			<div class="erjz_div clear">
+				<div class="erz_div">
+					<img src="img/log.png"/>
+				</div>
+				<div class="ery_div">
+					<div></div>
+				</div>
+			</div>
+			<div class="erjz_div">
+				<ul class="erqx_ul clear">
+					<li>
+						<input type="checkbox" checked="checked" class="qx_inp"/>
+						<label>全选</label>
+						<span>商品</span>
+					</li>
+					<li>单价</li>
+					<li>优惠</li>
+					<li>
+						<div class="diqu_div">
+							<span>北京市<i></i></span>
+						</div>
+						<div class="xuze_div">
+							<select size ="9" > 
+								<option>-请选择-</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+							</select>
+							<select size ="9" > 
+								<option>-请选择-</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+								<option>上海</option>
+							</select>
+						</div>
+					</li>
+					<li>数量</li>
+					<li>小计</li>
+					<li>操作</li>
+				</ul>
+				
+				<!--<ul class="sp_ul clear">
+					<li>
+						<input type="checkbox" />
+						<img src="img/dfgx0.jpg" />
+						<span>
+							i尚变频空调_大幅提升制热制冷_KFR-72LW/(72555)FNhAb-A3 冷暖3匹机 立柜式 纯白
+						</span>
+					</li>
+					<li>
+						<span>¥ 8270.00</span>
+					</li>
+					<li>
+						<span>-</span>
+					</li>
+					<li>
+						<span>有货</span>
+					</li>
+					<li>
+						<div class="clear">
+							<span>-</span>
+							<input type="text" value="1"/>
+							<span>+</span>
+						</div>
+					</li>
+					<li>
+						<span>¥ 8270.00</span>
+					</li>
+					
+					<li>
+						<span>收藏</span>
+						<span>删除</span>
+					</li>
+				</ul>-->
+			
+				<ul class="jie_ul clear" style="display: none;">
+					<li>
+						<a>删除选择商品</a>
+					</li>
+					<li>
+						<a>收藏选择商品</a>
+					</li>
+					<li>
+						<a>清空购物车</a>
+					</li>
+					<li>
+						<label>已选商品</label>
+						<span></span>
+						<label>件</label>
+					</li>
+					<li>
+						<label>优惠</label>
+						<span>¥ 0.00</span>
+					</li>
+					<li>
+						<label>合计(不含运费)：</label>
+						<span></span>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="sanjz_div clear" style="display: none;">
+				<div>继续购物</div>
+				<div>去结算</div>
+			</div>
+			
+			<div class="sijz_div">
+				<div>
+					<h2>购物车内暂时没有商品，登录后可同步电脑与手机购物车</h3>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		
+		<div class="wei_div">
+			<ul class="weijz_ul">
+				<li>
+					<h2><b>购物指南</b></h2>
+					<p>注册/登录</p>
+					<p>密码管理</p>
+					<p>购物流程</p>
+					<p>使用优惠券</p>
+					<p>使用礼品卡</p>
+				</li>
+				<li>
+					<h2><b>进度查询</b></h2>
+					<p>配送服务查询</p>
+					<p>全国配送区域</p>
+				</li>
+				<li>
+					<h2><b>售后服务</b></h2>
+					<p>售后服务政策</p>
+					<p>安装/维修</p>
+					<p>服务时效</p>
+					<p>服务预约系统</p>
+					<p  style="font-size: 14px;color: red;"><b>监督服务</b></p>
+
+				</li>
+				<li>
+					<h2><b>常见问题</b></h2>
+					<p>常见问题说明</p>
+					<p>权利说明</p>
+				</li>
+				<li>
+					<h2><b>联系我们</b></h2>
+					<p>联系我们</p>
+				</li>
+				<li>
+					<h2><b>支付说明</b></h2>
+					<p>在线支付</p>
+					<p>分期付款</p>
+					<p>退款说明</p>
+					<p>发票问题</p>
+				</li>
+				<li class="log_li">
+					<p>服务热线：<b>4008-365-315</b></p>
+				</li>
+			</ul>
+		</div>
+		<div class="wbz_div">
+			<div class="chinatu"></div>
+			<ul class="wbzjz_ul clear">
+				<li>
+					<i></i>
+					<span>正品有保障</span>
+				</li>
+				<li>
+					<i></i>
+					<span>七天无理由退货</span>
+				</li>
+				<li>
+					<i></i>
+					<span>大家电送货到家</span>
+				</li>
+				<li>
+					<i></i>
+					<span>售后无忧</span>
+				</li>
+			</ul>
+		</div>
+		<div class="wyhk_div">
+			<div class="wyhkjz_div" >
+				<p>珠海格力电器股份有限公司 版权所有粤ICP备05006515号</p>
+				<i></i>	
+			</div>
+		</div>	
+		<img src="img/shew.png" class="guding_img"/>
+		
+		
+		
+		
+		<script>
+//---------------------------------判断是否登录-------------------------		
+			if(location.hash.replace("#","")!=""){
+				if( Cookie.has(location.hash.replace("#",""))){
+					$(".clcg_p").eq(0).html(function(ind,el){ 
+						return "你好："+location.hash.replace("#","")+el;
+					});
+					$(".clcg_p").siblings().css("display","none");
+					$(".clcg_p").css("display","block");
+				}
+			}
+			//-----给登录的注销添加事件------
+			$(".clcg_p>span").on("click",function(){
+				Cookie.del(location.hash.replace("#",""));
+				location.href="Login.html";
+			})
+			
+			
+//------------------------开始获取购物的数据，然后渲染数据---------------------------------------------			
+			var arr=Object.keys(localStorage);
+			var brr=[];
+			arr.forEach(function(ele){
+				if(ele.match(/1324/g)!=null){
+					brr.push(ele);
+				}
+			})
+			if(brr.length>0){
+				var jiesuan=0;
+				$(".jie_ul").css("display","block");
+				$(".sanjz_div").css("display","block");
+				$(".sijz_div").css("display","none");
+				for(var i=0;i<brr.length;i++){	
+					
+					var obj=JSON.parse(localStorage[brr[i]])
+					var $ul=$("<ul></ul>").addClass("sp_ul clear").attr("idh",brr[i]);				
+					//第一个li
+					var $li1=$("<li></li>");
+					var $img1=$("<img />").attr("src",obj.spt);
+					var $span1=$("<span></span>").html(obj.js)
+					$li1.append($("<input type='checkbox'/>").attr("checked","checked").addClass("xfx_inp"))
+					$li1.append($img1);
+					$li1.append($span1);
+
+					//第二个li
+					var $li2=$("<li></li>");
+					var $span2=$("<span></span>").html("¥"+obj.jg)
+					$li2.append($span2);
+					//第三个li
+					var $li3=$("<li></li>");
+					var $span3=$("<span></span>").html("-")
+					$li3.append($span3);
+					//第四个li
+					var $li4=$("<li></li>");
+					var $span4=$("<span></span>").html("有货")
+					$li4.append($span4);
+					//第五个li
+					var $li5=$("<li></li>");
+					var $div5=$("<div></div>").addClass("clear");
+					var $spn5=$("<span></span>").html("-")
+					var $spn51=$("<span></span>").html("+")
+					var $inp5=$("<input type='text'/>").val(obj.sl);
+					//-----添加点击事件，增加或减少--------------------------------
+					$spn5.on("click",function(){
+						var idh=$(this).closest("ul").eq(0).attr("idh");
+						var ss=JSON.parse(localStorage[idh])
+						if(isNaN($(this).next().val())){
+							alert("请输入数字");
+							$(this).next().val(ss.sl);
+						}else{
+							if(Number($(this).next().val())>1){
+								$(this).css("cursor","pointer")
+								var q=Number($(this).next().val())-1;
+								$(this).next().val(q);
+								mony=Number($(this).next().val())*Number(ss.jg);
+								console.log(mony);
+								ss.sl=$(this).next().val();
+								localStorage.setItem(idh,JSON.stringify(ss));
+								$(this).closest("li").next().children().html("¥"+mony+".00")
+								jsje($(".sp_ul").length);
+							}else{
+								$(this).css("cursor","not-allowed")
+							}
+						}
+					})
+					$spn5.on("mouseenter",function(){
+						if(!isNaN($(this).next().val())){
+							if($(this).next().val()!=1){
+								$(this).css("cursor","pointer");
+							}
+						}
+
+					})
+					
+					$spn51.on("click",function(){
+						var idh=$(this).closest("ul").eq(0).attr("idh");
+						var ss=JSON.parse(localStorage[idh])
+						if(isNaN($(this).prev().val())){
+							alert("请输入数字");
+							$(this).prev().val(ss.sl);
+						}else{
+							
+							$(this).css("cursor","pointer")
+							var q=Number($(this).prev().val())+1;
+							$(this).prev().val(q);
+							mony=Number($(this).prev().val())*Number(ss.jg);
+							ss.sl=$(this).prev().val();
+							localStorage.setItem(idh,JSON.stringify(ss));
+							$(this).closest("li").next().children().html("¥"+mony+".00");
+							jsje($(".sp_ul").length);
+						}
+					})
+					
+					$div5.append($spn5);
+					$div5.append($inp5);
+					$div5.append($spn51);
+					$li5.append($div5);
+					//第六个li
+					var mony=Number(obj.jg)*Number(obj.sl)
+					var $li6=$("<li></li>").addClass("je_li");
+					var $span6=$("<span></span>").html("¥"+mony+".00")
+					$li6.append($span6);
+					//第七个li
+					var $li7=$("<li></li>");
+					var $spn7=$("<span></span>").html("收藏")
+					var $spn71=$("<span></span>").html("删除")
+					//----------删除------------
+					$spn71.on("click",function(){
+						localStorage.removeItem($(this).closest("ul").eq(0).attr("idh"));
+						$(this).closest("ul").remove();
+						jsje($(".sp_ul").length);
+						if($(".sp_ul").length<1){
+							$(".jie_ul").css("display","none");
+							$(".sanjz_div").css("display","none");
+							$(".sijz_div").css("display","block");
+						}
+						
+					})
+					$li7.append($spn7);
+					$li7.append($spn71);
+					
+					$ul.append($li1)
+					$ul.append($li2)
+					$ul.append($li3)
+					$ul.append($li4)
+					$ul.append($li5)
+					$ul.append($li6)
+					$ul.append($li7)
+					
+					$(".erjz_div").eq(1).append($ul);
+					$(".erjz_div").eq(1).append($(".jie_ul").eq(0))
+					jiesuan+=mony;
+					
+				}
+			}
+			jsje($(".sp_ul").length);
+			//结算金额的方法
+			function jsje(k){
+				//结算金额
+				var jine=0;
+				//商品个数
+				var gs=0;
+				for (var i=0;i<k;i++) {
+					if($(".sp_ul").eq(i).children().eq(0).children("input").get(0).checked){
+						jine+=(parseInt($(".sp_ul").eq(i).children().eq(5).children("span").text().replace("¥","")));
+						gs+=parseInt($(".sp_ul").eq(i).children().eq(4).children("div").children("input").val());
+					}
+				}
+				$(".jie_ul>li").eq($(".jie_ul>li").length-1).children("span").html("¥"+jine+".00");
+				$(".jie_ul>li").eq(3).children("span").html(gs);
+				return jine;
+			}
+
+//------------------------------复选框结算---------------------------------
+			for(var i=0;i<$(".sp_ul").length;i++){
+				var $fxinp=$(".sp_ul").eq(i).children().eq(0).children("input")
+				$fxinp.on("change",function(){
+					jsje($(".sp_ul").length);
+					for(var k=0;k<$(".xfx_inp").length;k++){
+						if($(".xfx_inp").get(k).checked==false){
+							$(".qx_inp").get(0).checked=false;
+							return false;
+						}
+						
+						$(".qx_inp").get(0).checked=true;
+					}
+
+				})
+			}
+			$(".qx_inp").eq(0).on("change",function(){
+				if($(this).get(0).checked){
+					$(".xfx_inp").attr("checked","checked");
+				}else{
+					$(".xfx_inp").removeAttr("checked");
+				}
+				jsje($(".sp_ul").length);
+			})
+//-------------------------------商品结算中的，删除，清空----------------------------------------------
+			$(".jie_ul>li").eq(0).children("a").on("click",function(){
+				for(var i=0;i<$(".xfx_inp").length;i++){
+					console.log($(".xfx_inp").get(i).checked)
+					if($(".xfx_inp").get(i).checked){
+						localStorage.removeItem($(".xfx_inp").eq(i).closest("ul").eq(0).attr("idh"));
+						$(".xfx_inp").eq(i).closest("ul").remove();
+						jsje($(".sp_ul").length);
+						if($(".sp_ul").length==0){
+							$(".jie_ul").css("display","none");
+							$(".sanjz_div").css("display","none");
+							$(".sijz_div").css("display","block");
+						}
+						i--;
+					}
+				}
+			})
+			
+			$(".jie_ul>li").eq(2).children("a").on("click",function(){
+				for(var i=0;i<$(".sp_ul").length;i++){
+					localStorage.removeItem($(".sp_ul").eq(i).attr("idh"));
+				}
+				$(".sp_ul").remove();
+				$(".jie_ul").css("display","none");
+				$(".sanjz_div").css("display","none");
+				$(".sijz_div").css("display","block");
+				
+			})
+//------------------------二级导航之选择目的地---------------------------
+			$(".diqu_div>span").on("mouseenter",function(){
+				$(".diqu_div").next().css("display","block");
+				$(this).css("border-bottom","none")
+			})
+			$(".diqu_div").closest("li").on("mouseleave",function(){
+				$(".diqu_div").next().css("display","none");
+				$(".diqu_div>span").css("border-bottom","")
+			})
+			$(".diqu_div").next().on("mouseenter",function(){
+				$(this).css("display","block");
+				$(".diqu_div>span").css("border-bottom","none");
+			});
+			$(".diqu_div").next().on("mouseleave",function(){
+				$(this).css("display","none");
+				$(".diqu_div>span").css("border-bottom","");
+			});
+			
+//----------------------跳转主页-------------------------------			
+			$(".erz_div>img").on("click",function(){
+				if(location.hash){
+					location.href="gree.html"+location.hash;
+				}else{
+					location.href="gree.html";
+				}
+			})
+			$(".sanjz_div>div").eq(0).on("click",function(){
+				if(location.hash){
+					location.href="gree.html"+location.hash;
+				}else{
+					location.href="gree.html";
+				}
+			})
+			$(".zy_a").eq(0).on("click",function(){
+				if(location.hash){
+					location.href="gree.html"+location.hash;
+				}else{
+					location.href="gree.html";
+				}
+			})
+//------------------------跳转登录注册------------------------------
+			$(".sz_twoul>li").eq(0).on("click","a",function(){
+				if($(this).index()==0){
+					location.href="Login.html";
+				}else{
+					location.href="enrol.html";
+				}
+			})
+			
+//------------------------结算的绑定事件--------------------------------------
+			$(".sanjz_div>div").eq(1).on("click",function(){
+				console.log(525)
+				if(location.hash.replace("#","")!=""){
+					if( Cookie.has(location.hash.replace("#",""))){
+						var q=$(".jie_ul>li").eq($(".jie_ul>li").length-1).children("span").html();
+						alert("结算完成！本次需支付："+q);
+					}
+				}else{
+					if(confirm("请登录过后才能结算！")){
+						location.href="Login.html";
+					}
+				}
+			})
+
+		</script>
+		
+	</body>
+</html>

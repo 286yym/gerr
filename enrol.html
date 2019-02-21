@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/zhuce.css"/>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script src="js/verify.js"></script>
+		<script type="text/javascript" src="js/vyzm.js" ></script>
+		<script type="text/javascript" src="js/vyzm.js" ></script>
+	</head>
+	<body>
+		<div class="shou_div">
+			<div class="shoujz_div">
+				<img src="img/log.png"/>
+			</div>
+		</div>
+		<div class="er_div">
+			<div class="erjz_div">
+				<div class="zb_div">
+					<h3>
+						<span>新用户注册</span>
+						<i>已有账号？去<a class="dl_a">登录</a>></i>
+					</h3>
+					<ul class="zx_ul">
+						<li>
+							<label>登录名：</label>
+							<span></span>
+							<input type="text" class="yh_inp" placeholder="邮箱/手机号码"/>
+							<p>请输入邮箱或者手机号码</p>
+						</li>
+						<li>
+							<label>设置密码：</label>
+							<span></span>
+							<input type="password" class="mm_inp" placeholder="密码"/>
+							<p>8-20位字符，并且必须包含数字和字母</p>
+						</li>
+						<li>
+							<label>确认密码：</label>
+							<span></span>
+							<input type="password" class="mm_inp" placeholder="密码"/>
+							<p>再次输入密码</p>
+						</li>
+						<li>
+							<label>验证码：</label>
+							<input type="text" id="yzm_inp"/>
+							<div id="yzm_div" ></div>
+							<i id="huan_i">换一张</i>
+							<p>请输入验证码</p>
+						</li>
+					</ul>
+					<div class="yx_div">
+						<input type="checkbox" checked="checked" />
+						<span>已阅读，并同意 <a>《格力官方商城用户注册协议》</a></span>
+					</div>	
+					<div class="dl_div">
+						<a id="zhuce_a">注册</a>
+					</div>	
+				</div>
+				<div class="yb_div" idh="1324003"></div>
+			</div>
+		</div>
+		<script>
+	//----------------------------------提示--------------------------
+			$(".zx_ul>li").on("focus","input",function(e){
+				$(this).nextAll("p").css("display","block");
+				var n=$(this).closest("li").index();
+				var s="";
+				switch(n){
+					case 0:
+						s="请输入邮箱或者手机号码";
+						break;
+					case 1:
+						s="8-20位字符，并且必须包含数字和字母";
+						break;
+					case 2:
+						s="再次输入密码";	
+						break;
+					case 3:
+						s="请输入验证码";	
+						break;
+				}
+				$(this).nextAll("p").html(s).css("color","");
+			})
+		
+			$(".zx_ul>li").on("blur","input",function(){
+				$(this).nextAll("p").css("display","");
+			})
+			
+	//--------------------------点击注册按钮事件-----------------------------	
+			$(".dl_div>a").on("click",function(){
+				console.log($(".yx_div>input").get(0).checked)
+				if($(".yx_div>input").get(0).checked==false){
+					alert("请同意《格力官方商城用户注册协议》");
+					return false;
+				}
+				var yh=$(".yh_inp").eq(0).val();
+				var mm1=$(".mm_inp").eq(0).val();
+				var mm2=$(".mm_inp").eq(1).val();
+				if(yanyh(yh)&&yanmm(mm1)&&qrmm(mm1,mm2)&&yzm()){
+					console.log("验证成功");
+					localStorage.setItem(yh,mm1);
+					if(confirm("注册成功，是否进入登录界面！")){
+						location.href="Login.html#"+yh;
+					}
+				}else{
+					console.log("至少有一项验证失败");
+				}
+			
+			})
+		
+//-------------------------这是随机验证码------------------------------
+			sjverify("yzm_div","huan_i",{"type":"2"})
+			
+//----------------------跳转界面---------------------------------			
+			//-----跳转登录-------------------
+			$(".dl_a").on("click",function(){
+				location.href="Login.html";
+			})
+			//--------跳转主页----------------
+			$(".shoujz_div>img").on("click",function(){
+				location.href="gree.html";
+			})
+			//--------跳转详情页------------------
+//			$(".yb_div").on("click",function(){
+//				location.href="格力.html?"+$(".yb_div").eq(0).attr("idh");
+//			})
+//----------------------------验证账号的方法-------------------
+			function yanyh(zh){
+				var deg=/^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\d{8}$/g
+				var deg1=/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g
+				//查看是否找到用户名
+				if(localStorage.getItem(zh)){
+					//如果找到，返回已存在
+					alert("用户名已存在！");
+					$(".zx_ul>li").eq(0).children("input").focus();
+					$(".zx_ul>li").eq(0).children("p").html("用户名已存在").css("color","#ff6700")
+					return false;
+					
+				}else{
+					if(deg.test(zh)||deg1.test(zh)){
+						console.log("用户名验证成功");
+						$(".zx_ul>li").eq(0).children("p").html("用户名可用").css("display","block");
+						return true;
+					}else{
+						console.log("用户名验证户失败");
+						$(".zx_ul>li").eq(0).children("input").focus();
+						$(".zx_ul>li").eq(0).children("p").html("用户名格式不对").css("color","#ff6700");
+						return false;
+						
+					}
+				}
+			}
+//---------------------------验证密码的方法---------------------------
+			function yanmm(mm){
+				var deg2=/^(?!^\d{8,20}$)(?!^[a-z]{8,20}$)[0-9a-z]{8,20}$/g;
+				if(deg2.test(mm)){
+					console.log("密码验证成功");
+					$(".zx_ul>li").eq(1).children("p").html("密码格式正确").css("display","block");
+					return true;
+				}else{
+					console.log("密码验证失败");
+					$(".zx_ul>li").eq(1).children("input").focus();
+					$(".zx_ul>li").eq(1).children("p").html("密码格式不对").css("color","#ff6700");
+					return false;
+				}
+				
+			}
+//--------------------------验证确认密码的方法-------------------------		
+			function qrmm(mm1,mm2){
+				if(mm1==mm2){
+					$(".zx_ul>li").eq(2).children("p").html("俩次密码一致").css("display","block");
+					return true;
+				}else{
+					$(".zx_ul>li").eq(2).children("input").focus();
+					$(".zx_ul>li").eq(2).children("p").html("密码不一致").css("color","#ff6700");
+					return false;
+				}
+			}
+//-------------------------验证 验证码的方法--------------------------------			
+			function yzm(){
+				var sr= $("#yzm_inp").val().toUpperCase();
+				var yz= $("#yzm_div").get(0).getAttribute("yzm").toUpperCase();
+				if(sr==yz){
+					$(".zx_ul>li").eq(3).children("p").html("验证码正确").css("display","block");
+					console.log("验证码成功");
+					return true;
+				}else{
+					console.log("验证码失败");
+					$(".zx_ul>li").eq(3).children("input").focus();
+					$(".zx_ul>li").eq(3).children("p").html("验证码错误").css("color","#ff6700");
+					return false;
+				}
+			}
+			
+
+		</script>
+	</body>
+</html>

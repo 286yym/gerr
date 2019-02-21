@@ -1,0 +1,206 @@
+@charset "utf-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+ul{list-style: none;}
+.shoujz_div{
+	width: 980px;
+	margin: 15px auto;
+}
+.shoujz_div>img{
+	margin-top: 25px;
+}
+.shoujz_div>img:hover{
+	cursor: pointer;
+}
+
+
+.erjz_div{
+	width: 980px;
+	margin:auto;
+}
+.erjz_div>.zb_div{
+	float: left;
+    padding: 25px;
+    background: #fff;
+    border-style: solid;
+    border-width: 2px 0 1px 1px;
+    border-color: #c00 #ddd #ddd #ddd;
+    height: 420px;
+    width: 650px;
+    padding-right: 0;
+}
+.erjz_div>.yb_div{
+	float: left;
+	width: 297px;
+	height: 470px;
+	background: url(../img/dlzc1.jpg);
+	border-style: solid;
+    border-width: 2px 0 1px 1px;
+    border-color: #c00 #ddd #ddd #ddd;
+}
+.erjz_div>.yb_div:hover{
+	cursor: pointer;
+}
+.zb_div>h3{
+	margin-top: 10px;
+}
+.zb_div>h3>span{
+	color: #777;
+    font-family: 微软雅黑;
+    font-size: 20px;
+    margin-right: 15px;
+    font-weight: 600;
+    
+}
+.zb_div>h3>i{
+	font-style: normal;
+    font: 12px Arial,Verdana,"微软雅黑";
+    line-height: 60px;
+    color: #555;
+    font-family: microsoft yahei;
+    font-size: 14px;
+    font-weight: 100;
+}
+.zb_div>h3>i>a{
+	color: #CC0000;
+	text-decoration: underline;
+	margin-left: 5px;
+}
+.zb_div>h3>i>a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+.zb_div>.zx_ul{
+    width: 650px;
+    height: 230px;
+}
+.zx_ul>li{
+	width: 650px;
+	height: 34px;
+	margin-bottom: 28px;
+}
+.zx_ul>li:nth-child(-n+3)>label{
+	float: left;
+	width: 95px;
+	text-align: center;
+	line-height: 34px;
+	display: block;
+    text-align: right;
+    width: 95px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #999;
+    line-height: 34px;
+}
+.zx_ul>li:nth-child(-n+3)>span{
+	width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    display: block;
+    float: left;
+}
+.zx_ul>li:nth-child(-n+3)>input{
+	border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    padding: 4px 20px 4px 3px;
+    line-height: 24px;
+    height: 24px;
+    text-indent: 5px;
+    width: 230px;
+    float: left;
+}
+
+.zx_ul>li:nth-child(1)>span{background: url(../img/dlzc.png) no-repeat 0px 0px;}
+.zx_ul>li:nth-child(2)>span{background: url(../img/dlzc.png) no-repeat 0px -33px;}
+.zx_ul>li:nth-child(3)>input{
+	border: 1px solid #ccc;
+    padding: 4px 20px 4px 3px;
+    line-height: 24px;
+    height: 24px;
+    text-indent: 5px;
+    width: 130px;
+    float: left;
+}
+.zx_ul>li:nth-child(3)>*{
+	float: left;
+}
+.zx_ul>li:nth-child(3)>i{
+	cursor: pointer;
+	font-style: normal;
+	line-height: 34px;
+	text-align: center;
+	font-size: 12px;
+}
+.zx_ul>li:nth-child(4){
+    height: 29px;
+    margin-bottom: 28px;
+}
+.zx_ul>li:nth-child(4)>input{
+	float: left;
+    margin-left: 105px;
+    margin-top: 4px;
+    color: #333;
+}
+
+.zx_ul>li:nth-child(4)>span{
+	float: left;
+	color: #555;
+    display:inline-block;
+    line-height: 16px;
+    margin-top: 1px;
+    font: 12px Arial,Verdana,"微软雅黑";
+}
+.zx_ul>li:nth-child(4)>a{
+	float: left;
+    color: #006cff;
+    text-decoration: underline;
+    margin-left: 165px;
+    line-height: 22px;
+    font: 12px Arial,Verdana,"微软雅黑";
+}
+.zx_ul>li:nth-child(4)>a:hover{
+	cursor: pointer;
+	text-decoration: none;
+	color: #CC0000;
+}
+
+.dl_div>a{
+	
+	background-color: #c00;
+    color: #fff;
+    display: block;
+    font-family: '微软雅黑';
+    font-size: 18px;
+    font-weight: 700;
+    height: 37px;
+    line-height: 37px;
+    margin-left: 104px;
+    text-align: center;
+    width: 290px; 	
+} 
+.dl_div>a:hover{
+	cursor: pointer;
+}
+.ks_div{
+	margin-top: 10px;
+}
+.ks_div>a{
+    color: #666;
+    width: 106px;
+    height: 49px;
+    display: block;
+    float: left;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.ks_div>a:nth-child(1){background: url(../img/dlzc.png) no-repeat 0 -207px;}
+.ks_div>a:nth-child(2){background: url(../img/dlzc.png) no-repeat 0 -148px;}
+.ks_div>a:nth-child(3){background: url(../img/dlzc.png) no-repeat 0 -86px;}
+.ks_div>a:hover,.dl_div>a{
+	cursor: pointer;
+	opacity: 0.9;
+}
